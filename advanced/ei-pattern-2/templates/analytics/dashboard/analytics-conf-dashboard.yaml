@@ -18,7 +18,7 @@ metadata:
   name: analytics-conf-dashboard
   namespace: {{ .Release.Namespace }}
 data:
-  {{- $analytics_dburl := printf "%s%s%s" "jdbc:mysql://" .Values.wso2.mysql.host ":3306/EI_ANALYTICS?useSSL=false" }}
+  {{- $analytics_dburl := printf "%s%s%s" "jdbc:sqlserver://" .Values.wso2.mysql.host ":1433;databaseName=wso2eianalytics;SendStringParametersAsUnicode=false" }}
   {{- $db_driver_class_name := .Values.wso2.mysql.driverClass }}
   {{- $db_validation_query := .Values.wso2.mysql.validationQuery }}
   {{- $db_username := .Values.wso2.mysql.username }}

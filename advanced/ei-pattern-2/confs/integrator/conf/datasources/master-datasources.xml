@@ -71,11 +71,12 @@
           <username>{{ DB_USERNAME }}</username>
           <password>{{ DB_PASSWORD }}</password>
           <driverClassName>{{ DRIVER_CLASSNAME }}</driverClassName>
-          <maxActive>80</maxActive>
-          <maxWait>60000</maxWait>
-          <testOnBorrow>true</testOnBorrow>
-          <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
-          <validationInterval>30000</validationInterval>
+           <maxActive>50</maxActive>
+           <maxWait>60000</maxWait>
+           <testOnBorrow>true</testOnBorrow>
+           <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
+           <validationInterval>30000</validationInterval>
+           <defaultAutoCommit>false</defaultAutoCommit>
         </configuration>
       </definition>
     </datasource>
@@ -91,11 +92,12 @@
           <username>{{ DB_USERNAME }}</username>
           <password>{{ DB_PASSWORD }}</password>
           <driverClassName>{{ DRIVER_CLASSNAME }}</driverClassName>
-          <maxActive>50</maxActive>
-          <maxWait>60000</maxWait>
-          <testOnBorrow>true</testOnBorrow>
-          <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
-          <validationInterval>30000</validationInterval>
+           <maxActive>50</maxActive>
+           <maxWait>60000</maxWait>
+           <testOnBorrow>true</testOnBorrow>
+           <validationQuery>{{ VALIDATION_QUERY }}</validationQuery>
+           <validationInterval>30000</validationInterval>
+           <defaultAutoCommit>false</defaultAutoCommit>
         </configuration>
       </definition>
     </datasource>

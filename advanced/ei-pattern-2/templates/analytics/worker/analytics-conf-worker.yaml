@@ -18,9 +18,9 @@ metadata:
   name: analytics-conf-worker
   namespace : {{ .Release.Namespace }}
 data:
-  {{- $cluster_dburl := printf "%s%s%s" "jdbc:mysql://" .Values.wso2.mysql.host ":3306/WSO2_CLUSTER_DB?useSSL=false" }}
-  {{- $analytics_dburl := printf "%s%s%s" "jdbc:mysql://" .Values.wso2.mysql.host ":3306/EI_ANALYTICS?useSSL=false" }}
-  {{- $persistence_dburl := printf "%s%s%s" "jdbc:mysql://" .Values.wso2.mysql.host ":3306/WSO2_PERSISTENCE_DB?useSSL=false" }}
+  {{- $cluster_dburl := printf "%s%s%s" "jdbc:sqlserver://" .Values.wso2.mysql.host ":1433;databaseName=wso2cluster;SendStringParametersAsUnicode=false" }}
+  {{- $analytics_dburl := printf "%s%s%s" "jdbc:sqlserver://" .Values.wso2.mysql.host ":1433;databaseName=wso2eianalytics;SendStringParametersAsUnicode=false" }}
+  {{- $persistence_dburl := printf "%s%s%s" "jdbc:sqlserver://" .Values.wso2.mysql.host ":1433;databaseName=wso2persistence;SendStringParametersAsUnicode=false" }}
   {{- $db_driver_class_name := .Values.wso2.mysql.driverClass }}
   {{- $db_validation_query := .Values.wso2.mysql.validationQuery }}
   {{- $db_username := .Values.wso2.mysql.username }}
